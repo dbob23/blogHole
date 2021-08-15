@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Home Page - Blog Hole</title>
+    </head>
+    <body>
+        <h1>Hello, Bobby!</h1>
+        <form action='/' method = 'post'>
+            <input placeholder='Name', name='name'>
+            <input placeholder='Post Conent', name='post'>
+            <input type='submit' value='Submit'>
+        </form>
+        {% for post in posts %}
+        <div>{{ post[1] + ': ' + post[2] }}</div>
+        {% endfor %}
+    </body>
+</html>
